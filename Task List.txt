@@ -1,0 +1,25 @@
+Tasks (11):
+
+-word reading section
+    -make text scroll
+    -random phrases
+    -word colour highlighting
+        -show when letters are wrong
+        -show which letters are done
+
+- Enforce typing the right letter
+
+- Metrics
+    - Measure wpm
+    - Measure accuracy
+        -count mistakes
+
+- Animate Speedometer
+    - spinning needle
+    - wpm number
+
+- Animate car
+
+Small Adjustments(1):
+
+- Stop out text doublelayering
