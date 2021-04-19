@@ -1,11 +1,8 @@
-Tasks (11):
+Tasks (8):
 
 -word reading section
-    -make text scroll
     -random phrases
-    -word colour highlighting
-        -show when letters are wrong
-        -show which letters are done
+    -show when letters are wrong
 
 - Enforce typing the right letter
 
@@ -19,6 +16,7 @@ Tasks (11):
     - wpm number
 
 - Animate car
+
 
 Small Adjustments(1):
 

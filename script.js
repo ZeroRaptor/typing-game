@@ -7,7 +7,8 @@ $('#txtBlur').attr('draggable', false);
 
 // Text input and verification
 
-var targStr = "Apparently, I need to think of some sentences";
+var targStr = "Apparently, I need to think of some sentences to fill the space with :)";
+var pos = 0;
 $("#txtOut").text(targStr);
 
 $(document).keypress(function(e){
@@ -20,14 +21,28 @@ $(document).keypress(function(e){
     }
     
     // Check its the correct char
-    if($("#txtIn").text().length == 0){
-        if($("#txtOut").text().split("")[0] == e.key){
-            $("#txtIn").text($("#txtIn").text() + e.key);
+    if($("#txtOut").text().split("")[pos] == e.key){
+        $("#txtIn").text($("#txtIn").text() + e.key);
+        pos++;
+
+        // Move text along
+        if(pos>13){
+            let temp = $("#txtOut").text().split("");
+            temp.shift();
+            $("#txtOut").text(temp.join(""));
+            pos--;
         }
-    } else {
-        if($("#txtOut").text().split("")[$("#txtIn").text().length] == e.key){
-            $("#txtIn").text($("#txtIn").text() + e.key);
-        }
+
+        // Grey out text
+        let temp = $("#txtOut").text();
+        $(".grey").remove();
+        $("#txtOut").text(temp);
+
+        let regex = new RegExp(`.{${pos}}`);
+        $("#txtOut").html(function (i,html){
+            return html.replace(regex,'<span class="grey">$&</span>');
+            //return html.replace(/.{2}/,'<span class="grey">$&</span>');
+        });
     }
-    
+
 });
