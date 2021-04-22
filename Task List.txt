@@ -1,23 +1,18 @@
-Tasks (8):
+Tasks (5):
 
--word reading section
-    -random phrases
-    -show when letters are wrong
-
-- Enforce typing the right letter
+- Add random phrases
 
 - Metrics
     - Measure wpm
-    - Measure accuracy
-        -count mistakes
 
 - Animate Speedometer
-    - spinning needle
+    - spinning needle - transform origin: center bottom. With each change in wpm, rotate
     - wpm number
 
-- Animate car
-
+- Improve car animation
 
 Small Adjustments(1):
 
 - Stop out text doublelayering
+- Stop mistakes when finished string
+- Delete old text better, maybe overflow hidden

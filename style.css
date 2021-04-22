@@ -91,7 +91,7 @@ body {
 
 #txtIn {
     position: fixed;
-    right: 50vw; 
+    right: 42.5vw; 
     top: 32vh;
 
     width: 45vw;
@@ -100,8 +100,21 @@ body {
     font-size: 5vh;
     text-align: right;
     font-family: 'Roboto', sans-serif;
+    color:white;
     overflow: hidden;
     border-right: solid black;
+    padding: 0.5vh;
+}
+
+#txtInBg {
+    background: rgba(0,0,0,0.5);
+    width: 39vw;
+    height: 6vh;
+
+    position: fixed;
+    right: 42.5vw; 
+    top: 32vh;
+    padding: 0.5vh;
 }
 
 #txtCont{
@@ -128,4 +141,25 @@ body {
 
 .grey {
     color:gray;
+}
+
+/*  ----- Stats Bar ----- */
+
+#statsBar {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vh;
+    width: 20vw;
+    height: 4vh;
+
+    position: fixed;
+    left: 60vw; 
+    top: 32vh;
+
+    padding: 1.5vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
