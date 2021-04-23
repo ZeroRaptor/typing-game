@@ -1,18 +1,15 @@
-Tasks (5):
+Tasks (2):
 
 - Add random phrases
+- Something when string is complete
 
-- Metrics
-    - Measure wpm
-
-- Animate Speedometer
-    - spinning needle - transform origin: center bottom. With each change in wpm, rotate
-    - wpm number
-
-- Improve car animation
-
-Small Adjustments(1):
+Small Adjustments(3):
 
 - Stop out text doublelayering
 - Stop mistakes when finished string
 - Delete old text better, maybe overflow hidden
+
+Possible Extras (2):
+
+- Leaderboard for individual phrases
+- Adjust for phones

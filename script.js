@@ -16,6 +16,9 @@ var seconds = 0;
 var miliseconds = 0;
 var clock;
 var accuracy = 100;
+var words = 0;
+var wpm = 0;
+var carPos = $("#carImg").position().left;
 $("#txtOut").text(targStr);
 
 $(document).keypress(function(e){
@@ -51,11 +54,29 @@ $(document).keypress(function(e){
             return html.replace(regex,'<span class="grey">$&</span>');
         });
 
+        // Recalc wpm
+        words+=0.2;
+        words = Math.floor(words * 10) / 10;
+        wpm = (60 / (seconds + (miliseconds / 100))) * words;
+        if(wpm > 200){
+            wpm = 200;
+        }
+        $("#wpmNum").text(Math.floor(wpm));
+
+        // Move Needle
+        let degrees = -120 + (Math.floor(wpm) * 2);
+
+        if(degrees > 120){
+            degrees = 120;
+        }
+        $("#needle").css({transform:'rotate('+ degrees +'deg)'});
+
         // Move Car
         var increment = $(window).width() * 0.9;
         increment -= $("#carImg").width();
         increment /=  targStr.length;
-        $("#carImg").css({left:"+="+increment});
+        carPos += increment
+        $("#carImg").css({left:carPos});
 
         // Start Clock
         if(realPos == 1){
