@@ -13,6 +13,7 @@ body {
     flex-direction: column;
     justify-content:flex-end;
     align-items: center;
+    overflow: hidden;
 
     user-select: none;
 }
@@ -44,6 +45,8 @@ body {
     left: 49.9%;
     transform-origin: bottom center;
     transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
     transform: rotate(-120deg);
 }
 
@@ -66,7 +69,9 @@ body {
     top:63%;
 
     width: 10vw;
-    transition: 0.5s;
+    transition: left 0.5s;
+    -webkit-transition: left 0.5s;
+    -moz-transition: left 0.5s;
 }
 
 /* ----- Frosted Glass ----- */
@@ -122,9 +127,9 @@ body {
 /*  ----- Text Output & Input ----- */
 
 #txtIn {
-    position: fixed;
-    right: 42.5vw; 
-    top: 32vh;
+    position: absolute;
+    right: 0; 
+    top: 0;
 
     width: 45vw;
     height: 6vh;
@@ -136,6 +141,7 @@ body {
     overflow: hidden;
     border-right: solid black;
     padding: 0.5vh;
+    white-space: nowrap;
 }
 
 #txtInBg {
@@ -143,10 +149,11 @@ body {
     width: 39vw;
     height: 6vh;
 
-    position: fixed;
+    position: absolute;
     right: 42.5vw; 
     top: 32vh;
     padding: 0.5vh;
+    overflow: hidden;
 }
 
 #txtCont{
@@ -169,6 +176,7 @@ body {
 
 #txtOut{
     width:80vw;
+    white-space: nowrap;
 }
 
 .grey {
@@ -194,4 +202,94 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+/* ----- Scoreboard ----- */
+
+#overlay{
+    display: none;
+    background: rgba(255,255,255,0);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+#cloudTL{
+    width: 70%;
+    transform: rotate(180deg);
+    position: absolute;
+    top:-80%;
+    left:-10%;
+}
+
+#cloudTR{
+    width: 60%;
+    transform: rotate(180deg);
+    position: absolute;
+    top:-80%;
+    right:-10%;
+}
+
+#cloudBL{
+    width: 70%;
+    position: absolute;
+    bottom:-80%;
+    left:-10%;
+}
+
+#cloudBR{
+    width: 80%;
+    position: absolute;
+    bottom:-80%;
+    right:-10%;
+}
+
+#helicopter {
+    height:70vh;
+
+    position: absolute;
+    top: 10%;
+    right: -100%;
+}
+
+#scoreCont {
+    width: 25%;
+    height: 35%;
+    position: absolute;
+    top: 30%;
+    left: 131%;
+
+    background: rgba(255,255,255,0.1);
+    border-radius: 5%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score {
+    color: white;
+    font-size: 2vw;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#scoreTime {
+    font-size:3vw;
+}
+
+#scoreButtons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#scoreButtons img {
+    width:10%;
+    cursor: pointer;
 }

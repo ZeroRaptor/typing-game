@@ -1,15 +1,23 @@
-Tasks (2):
+Current Tasks (1):
+
+- Seperate file for menu
+
+
+Small Adjustments / Bugs (1):
+
+- with the letters "fi", "i" is highlighted one too early. change font and see if the error continutes?
+
+
+Future Tasks (4):
 
 - Add random phrases
-- Something when string is complete
-
-Small Adjustments(3):
-
-- Stop out text doublelayering
-- Stop mistakes when finished string
-- Delete old text better, maybe overflow hidden
-
-Possible Extras (2):
-
-- Leaderboard for individual phrases
 - Adjust for phones
+- Noise when complete
+- Countdown to start
+
+
+Possible Extras (3):
+
+- Animate helicopter blades?
+- Leaderboard for individual phrases with personal records
+- Dark theme

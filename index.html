@@ -22,8 +22,8 @@
         </div>
     </div>
 
-    <div id="txtInBg"></div>
-    <div id="txtIn"></div>
+    <div id="txtInBg"><div id="txtIn"></div></div>
+    
     <div id="statsBar">
         <div id="mistakes">100%</div>
         <div id="timer">00.0s</div>
@@ -35,7 +35,26 @@
         <div id="needle"></div>
     </div>
 
+    <div id="overlay">
+        <img id="cloudTR" src="assets/cloudGrey.svg"/>
+        <img id="cloudTL" src="assets/cloud.svg"/>
+        <img id="cloudBR" src="assets/cloudGrey.svg"/>
+        <img id="cloudBL" src="assets/cloud.svg"/>
+
+        <img id="helicopter" src="assets/heli.svg"/>
+        <div id="scoreCont">
+            <div class="score" id="scoreTime"></div>
+            <div class="score" id="scoreAccuracy"></div>
+            <div class="score" id="scoreWpm"></div>
+            <div id="scoreButtons">
+                <img src="assets/retry.svg" id="scoreRetry" />
+                <img src="assets/home.svg" id="scoreHome" />
+            </div>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="plugins/jquery.xcolor.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
